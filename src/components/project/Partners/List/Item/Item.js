@@ -1,7 +1,7 @@
 import "./Item.scss";
 import React from "react";
 
-function Item({ partner }) {
+function Item({ partner = {} }) {
   return (
     <li id="list-item">
       <div className="item-1">
