@@ -2,15 +2,17 @@ import "./List.scss";
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import Item from "./Item";
+import Input from "../../../global/Input";
+import Button from "../../../global/Button";
 
 function PartnersList({ partners = [], ...rest }) {
-  const searchRef = useRef();
+  let searchRef = useRef();
   const [filteredPartners, setFilteredPartners] = useState(partners);
 
   const handleKeyUp = (event) => {
     switch (event.keyCode) {
       case 27:
-        searchRef.current.value = "";
+        searchRef.value = "";
         handleSearch();
         break;
       default:
@@ -21,24 +23,29 @@ function PartnersList({ partners = [], ...rest }) {
     setFilteredPartners(
       partners.filter((partner) => {
         return (
-          partner.name
-            .toLowerCase()
-            .indexOf(searchRef.current.value.toLowerCase()) !== -1
+          partner.name.toLowerCase().indexOf(searchRef.value.toLowerCase()) !==
+          -1
         );
       })
     );
   };
 
+  const handleAddPartner = () => {
+    console.log("add new partner");
+  };
+
   return (
     <>
       <Header title="Partners">
-        <input
+        <Input
           placeholder="Search"
           onChange={handleSearch}
           onKeyUp={handleKeyUp}
-          ref={searchRef}
-        ></input>
-        <button>test</button>
+          forwardRef={(ref) => (searchRef = ref)}
+        ></Input>
+        <Button className="btn btn-primary flat" onClick={handleAddPartner}>
+          <i className="fas fa-plus"></i>
+        </Button>
       </Header>
       <ul id="list">
         {filteredPartners.map((partner) => (

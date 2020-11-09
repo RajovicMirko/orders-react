@@ -1,0 +1,26 @@
+@import "../../../scss/variables";
+
+#button {
+  outline: none;
+
+  &.flat {
+    border: none;
+  }
+
+  &.btn {
+    padding: 0.5rem;
+
+    &.btn-primary {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  & i {
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
