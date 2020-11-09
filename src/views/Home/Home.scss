@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+#home {
+  & .welcome-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $primary;
+  }
+}

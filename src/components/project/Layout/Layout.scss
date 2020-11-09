@@ -1,0 +1,23 @@
+#layout {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(30px, auto) 1fr;
+
+  // & #router-view {
+  //   display: grid;
+  //   grid-template-columns: minmax(200px, 300px) 1fr;
+  // }
+
+  & #router-view {
+    display: flex;
+
+    & #drawer {
+      flex: 1;
+    }
+
+    & #page {
+      flex: 2;
+    }
+  }
+}

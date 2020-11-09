@@ -1,0 +1,21 @@
+@import "../../../../scss/variables";
+
+#page {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+
+  & .container {
+    position: relative;
+    margin: 0.5rem 1rem;
+  }
+
+  & .page {
+    min-height: 100%;
+    display: grid;
+
+    &.page-center {
+      place-items: center;
+    }
+  }
+}

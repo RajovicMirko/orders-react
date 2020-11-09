@@ -1,0 +1,37 @@
+@import "../../../../scss/variables";
+
+$nav-padding: 0.7rem;
+$nav-box-shadow: 0 2px 6px 1px $shadow-color;
+$menu-btn-size: 1.5rem;
+$menu-btn-scale: scale(1.2);
+
+nav {
+  display: flex;
+  padding: $nav-padding;
+  background-color: $primary;
+  color: $white;
+  box-shadow: $nav-box-shadow;
+  z-index: 100;
+
+  & #banner {
+    display: flex;
+    align-items: center;
+
+    & .menu-btn {
+      margin: 0;
+      margin-right: $nav-padding;
+      font-size: $menu-btn-size;
+
+      :hover {
+        cursor: pointer;
+        transform: $menu-btn-scale;
+      }
+    }
+
+    & .title {
+      margin: 0;
+      font-size: $menu-btn-size;
+      font-weight: bold;
+    }
+  }
+}

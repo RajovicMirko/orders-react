@@ -1,0 +1,26 @@
+@import "../../../../scss/variables";
+
+#drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 80%;
+  min-height: 100%;
+  background-color: $drawer-back-color-sm;
+  color: $white;
+  z-index: 1000;
+
+  & .container {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #drawer {
+    position: relative;
+    min-width: 200px;
+    max-width: 300px;
+    z-index: 0;
+    background-color: $drawer-back-color-md;
+  }
+}
