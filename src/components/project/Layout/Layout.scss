@@ -8,14 +8,5 @@
     display: flex;
     position: relative;
     max-height: 100vh;
-
-    & #drawer {
-      flex: 1;
-      height: 100vh;
-    }
-
-    & #page {
-      flex: 2;
-    }
   }
 }

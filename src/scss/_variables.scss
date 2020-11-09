@@ -8,4 +8,5 @@ $black: #000000;
 $shadow-color: rgba(0, 0, 0, 0.3);
 
 $drawer-back-color-sm: rgba(0, 0, 0, 0.6);
+$drawer-back-color-sm: adjust-color($primary, $alpha: -0.2);
 $drawer-back-color-md: $primary;
