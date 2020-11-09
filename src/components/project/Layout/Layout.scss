@@ -1,19 +1,17 @@
 #layout {
   position: relative;
-  min-height: 100vh;
+  max-height: 100vh;
   display: grid;
-  grid-template-rows: minmax(30px, auto) 1fr;
-
-  // & #router-view {
-  //   display: grid;
-  //   grid-template-columns: minmax(200px, 300px) 1fr;
-  // }
+  grid-template-rows: minmax(30px, 50px) 1fr;
 
   & #router-view {
     display: flex;
+    position: relative;
+    max-height: 100vh;
 
     & #drawer {
       flex: 1;
+      height: 100vh;
     }
 
     & #page {

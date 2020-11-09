@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { render, unmountComponentAtNode } from "react-dom";
 // import { act } from "react-dom/test-utils";
 
@@ -19,5 +20,10 @@ afterEach(() => {
 });
 
 test("Links component - renders without crashing", () => {
-  render(<Links />, container);
+  render(
+    <BrowserRouter>
+      <Links />
+    </BrowserRouter>,
+    container
+  );
 });

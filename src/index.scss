@@ -10,4 +10,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+html,
+body,
+#root {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
 }
