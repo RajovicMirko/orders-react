@@ -1,0 +1,6 @@
+@import "../../../../scss/variables";
+
+#list {
+  height: calc(100vh - 54px - 5.19rem); // - header - navigation header
+  border: $list-border;
+}

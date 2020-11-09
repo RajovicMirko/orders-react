@@ -1,0 +1,21 @@
+@import "../../../../../scss/variables";
+
+#list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary;
+  color: $white;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  & .left {
+    & .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+  .right {
+  }
+}
