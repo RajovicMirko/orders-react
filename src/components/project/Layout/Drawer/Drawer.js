@@ -1,6 +1,8 @@
 import "./Drawer.scss";
 import React from "react";
 
+import Links from "./Links";
+
 function Drawer({ showDrawer, ...rest }) {
   const style = {};
 
@@ -8,7 +10,10 @@ function Drawer({ showDrawer, ...rest }) {
     return (
       showDrawer && (
         <div id="drawer" style={style}>
-          <div className="container">Drawer component</div>
+          <div className="container">
+            <h4>Navigation</h4>
+          </div>
+          <Links />
         </div>
       )
     );

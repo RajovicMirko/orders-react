@@ -6,11 +6,11 @@ import Router from "../../router";
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Layout>
           <Router />
-        </BrowserRouter>
-      </Layout>
+        </Layout>
+      </BrowserRouter>
     </div>
   );
 }
