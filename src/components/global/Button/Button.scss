@@ -1,5 +1,13 @@
 @import "../../../scss/variables";
 
+$focus-btn: (
+  box-shadow: 0 0 3px 2px
+    adjust-color(
+      $color: $black,
+      $alpha: -0.5,
+    ),
+);
+
 #button {
   outline: none;
   border: none;
@@ -8,12 +16,17 @@
   background-color: $primary;
   color: $white;
 
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px 2px adjust-color($color: $black, $alpha: -0.5);
+  }
+
   &.round {
     border-radius: 50%;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &.danger {
@@ -42,13 +55,19 @@
     &.success {
       color: $success;
     }
+
+    &:focus {
+      @extend .flat;
+      box-shadow: none;
+      text-shadow: 0 0 5px adjust-color($color: $black, $alpha: -0.5);
+    }
+
+    & i {
+      font-size: 1.3rem;
+    }
   }
 
   & i {
     font-size: 1rem;
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 }
