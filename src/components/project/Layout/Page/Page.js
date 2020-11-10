@@ -4,9 +4,9 @@ import React from "react";
 function Template({ children, onClick, ...rest }) {
   return (
     // <div id="page" onClick={onClick}>
-    <div id="page">
+    <main id="page">
       <div className="container">{children}</div>
-    </div>
+    </main>
   );
 }
 

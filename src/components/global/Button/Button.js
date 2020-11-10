@@ -4,8 +4,8 @@ import React from "react";
 function Button({ text, children, ...rest }) {
   return (
     <button id="button" {...rest}>
-      {text && text}
-      {children}
+      {children && <span>{children}</span>}
+      {text && <span>{text}</span>}
     </button>
   );
 }

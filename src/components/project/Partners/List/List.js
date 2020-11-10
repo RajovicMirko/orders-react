@@ -2,6 +2,7 @@ import "./List.scss";
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import Item from "./Item";
+// import Input from "../../../global/Input";
 import Input from "../../../global/Input";
 import Button from "../../../global/Button";
 
