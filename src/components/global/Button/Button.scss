@@ -3,11 +3,18 @@
 #button {
   outline: none;
   border: none;
-  padding: 0 0.7rem;
-  margin: 0 0.2rem;
+  padding: 0.6rem;
+  margin: 0.3rem;
   background-color: $primary;
   color: $white;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & i {
+    font-size: 1rem;
+  }
 
   &:hover {
     cursor: pointer;
@@ -22,6 +29,11 @@
     border-radius: 50%;
   }
 
+  &.white {
+    background-color: $white;
+    color: $primary;
+  }
+
   &.danger {
     background-color: $danger;
   }
@@ -32,7 +44,6 @@
 
   &.flat {
     @extend .round;
-    margin: 0 0.5rem;
     padding: 0;
     background: none;
     color: $primary;
@@ -57,10 +68,7 @@
 
     & i {
       font-size: 1.3rem;
+      margin: 0 0.3rem;
     }
-  }
-
-  & i {
-    font-size: 1rem;
   }
 }

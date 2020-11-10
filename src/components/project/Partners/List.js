@@ -45,7 +45,7 @@ function PartnersList({ partners = [], ...rest }) {
             onKeyUp={handleKeyUp}
             forwardRef={(ref) => (searchRef = ref)}
           ></Input>
-          <Button className="flat white" onClick={handleAddPartner}>
+          <Button className="round white" onClick={handleAddPartner}>
             <i className="fas fa-plus"></i>
           </Button>
         </>
@@ -54,38 +54,14 @@ function PartnersList({ partners = [], ...rest }) {
       {filteredPartners.map((item) => (
         <Item
           key={item.id}
-          actionsLeft={
-            <>
-              <Button onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-              <Button className="danger " onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-              <Button className="success " onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-              <Button className="round" onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-              <Button className="danger round" onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-              <Button className="success round" onClick={handleAddPartner}>
-                <i className="fas fa-trash-alt"></i>
-              </Button>
-            </>
-          }
+          actionsLeft=""
           actionsRight={
             <>
-              <Button className="flat" onClick={handleAddPartner}>
+              <Button className="flat success" onClick={handleAddPartner}>
                 <i className="fas fa-pencil-alt"></i>
               </Button>
               <Button className="flat danger" onClick={handleAddPartner}>
-                <i className="fas fa-pencil-alt"></i>
-              </Button>
-              <Button className="flat success" onClick={handleAddPartner}>
-                <i className="fas fa-pencil-alt"></i>
+                <i className="fas fa-trash-alt"></i>
               </Button>
             </>
           }

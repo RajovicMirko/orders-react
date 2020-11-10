@@ -10,14 +10,15 @@
 
     & .left {
       display: flex;
+      align-items: center;
 
       & .items {
-        display: flex;
+        @extend .left;
       }
     }
 
     & .actions {
-      display: flex;
+      @extend .left;
     }
   }
 }
