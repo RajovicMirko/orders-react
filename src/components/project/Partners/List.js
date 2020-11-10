@@ -1,7 +1,6 @@
-import "./List.scss";
 import React, { useRef, useState } from "react";
-import Header from "./Header";
-import Item from "./Item";
+import List from "components/global/List";
+import Item from "components/global/List/Item";
 import Input from "components/global/Input";
 import Button from "components/global/Button";
 
@@ -35,24 +34,26 @@ function PartnersList({ partners = [], ...rest }) {
   };
 
   return (
-    <>
-      <Header title="Partners">
-        <Input
-          placeholder="Search"
-          onChange={handleSearch}
-          onKeyUp={handleKeyUp}
-          forwardRef={(ref) => (searchRef = ref)}
-        ></Input>
-        <Button className="btn btn-primary flat" onClick={handleAddPartner}>
-          <i className="fas fa-plus"></i>
-        </Button>
-      </Header>
-      <ul id="list">
-        {filteredPartners.map((partner) => (
-          <Item key={partner.id} partner={partner} />
-        ))}
-      </ul>
-    </>
+    <List
+      title="Partners"
+      header={
+        <>
+          <Input
+            placeholder="Search"
+            onChange={handleSearch}
+            onKeyUp={handleKeyUp}
+            forwardRef={(ref) => (searchRef = ref)}
+          ></Input>
+          <Button className="btn btn-primary flat" onClick={handleAddPartner}>
+            <i className="fas fa-plus"></i>
+          </Button>
+        </>
+      }
+    >
+      {filteredPartners.map((item) => (
+        <Item key={item.id} {...item} />
+      ))}
+    </List>
   );
 }
 
