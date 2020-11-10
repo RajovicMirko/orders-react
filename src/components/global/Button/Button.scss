@@ -2,22 +2,50 @@
 
 #button {
   outline: none;
+  border: none;
+  padding: 0 0.7rem;
+  margin: 0 0.2rem;
+  background-color: $primary;
+  color: $white;
 
-  &.flat {
-    border: none;
+  &.round {
+    border-radius: 50%;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
-  &.btn {
-    padding: 0.5rem;
+  &.danger {
+    background-color: $danger;
+  }
 
-    &.btn-primary {
-      background-color: $primary;
+  &.success {
+    background-color: $success;
+  }
+
+  &.flat {
+    @extend .round;
+    margin: 0 0.5rem;
+    padding: 0;
+    background: none;
+    color: $primary;
+
+    &.white {
       color: $white;
+    }
+
+    &.danger {
+      color: $danger;
+    }
+
+    &.success {
+      color: $success;
     }
   }
 
   & i {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   &:hover {

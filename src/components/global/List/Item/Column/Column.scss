@@ -1,0 +1,19 @@
+@import "../../../../../scss/variables";
+
+.list-custom {
+  & .list-custom-item {
+    & .column {
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem;
+
+      & .caption {
+        font-size: 0.8rem;
+        color: $text-gray;
+      }
+
+      & .text {
+      }
+    }
+  }
+}

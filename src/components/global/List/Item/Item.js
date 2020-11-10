@@ -1,13 +1,14 @@
 import "./Item.scss";
 import React from "react";
 
-function Item({ name }) {
+function Item({ children, actionsLeft, actionsRight, ...rest }) {
   return (
-    <li id="list-item">
-      <div className="item-1">
-        <span className="caption">Name</span>
-        <span className="text">{name}</span>
+    <li className="list-custom-item" {...rest}>
+      <div className="left">
+        <div className="actions">{actionsLeft}</div>
+        <div className="items">{children}</div>
       </div>
+      <div className="actions">{actionsRight}</div>
     </li>
   );
 }

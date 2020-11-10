@@ -1,12 +1,12 @@
 @import "../../../scss/variables";
 
-#list {
+.list-custom {
   max-height: calc(100vh - 54px - 7rem); // - header - navigation header
   border: $list-border;
 }
 
 @media screen and (min-width: 512px) {
-  #list {
+  .list-custom {
     max-height: calc(100vh - 54px - 5.19rem); // - header - navigation header
   }
 }

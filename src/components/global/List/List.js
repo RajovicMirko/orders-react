@@ -6,7 +6,7 @@ function PartnersList({ title, header, children, ...rest }) {
   return (
     <>
       <Header title={title}>{header}</Header>
-      <ul id="list">{children}</ul>
+      <ul className="list-custom">{children}</ul>
     </>
   );
 }

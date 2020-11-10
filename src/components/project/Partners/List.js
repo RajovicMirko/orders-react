@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import List from "components/global/List";
 import Item from "components/global/List/Item";
+import Column from "components/global/List/Item/Column";
 import Input from "components/global/Input";
 import Button from "components/global/Button";
 
@@ -44,14 +45,45 @@ function PartnersList({ partners = [], ...rest }) {
             onKeyUp={handleKeyUp}
             forwardRef={(ref) => (searchRef = ref)}
           ></Input>
-          <Button className="btn btn-primary flat" onClick={handleAddPartner}>
+          <Button className="flat white" onClick={handleAddPartner}>
             <i className="fas fa-plus"></i>
           </Button>
         </>
       }
     >
       {filteredPartners.map((item) => (
-        <Item key={item.id} {...item} />
+        <Item
+          actionsLeft={
+            <>
+              <Button className="round" onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
+              <Button className="danger round" onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
+              <Button className="success round" onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
+            </>
+          }
+          actionsRight={
+            <>
+              <Button className="flat" onClick={handleAddPartner}>
+                <i className="fas fa-pencil-alt"></i>
+              </Button>
+              <Button className="flat danger" onClick={handleAddPartner}>
+                <i className="fas fa-pencil-alt"></i>
+              </Button>
+              <Button className="flat success" onClick={handleAddPartner}>
+                <i className="fas fa-pencil-alt"></i>
+              </Button>
+            </>
+          }
+        >
+          <Column key={item.id} caption="Id" text={item.id} />
+          <Column key={item.id} caption="Name" text={item.name} />
+          <Column key={item.id} caption="Test" text={"Test text"} />
+        </Item>
       ))}
     </List>
   );

@@ -1,22 +1,23 @@
 @import "../../../../scss/variables";
 
-#list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  border-bottom: $list-border;
-
-  & .caption {
-    font-size: 0.8rem;
-    color: $text-gray;
-  }
-
-  & .text {
-  }
-
-  & .item-1 {
+.list-custom {
+  & .list-custom-item {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: $list-border;
+
+    & .left {
+      display: flex;
+
+      & .items {
+        display: flex;
+      }
+    }
+
+    & .actions {
+      display: flex;
+    }
   }
 }

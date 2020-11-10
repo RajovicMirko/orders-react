@@ -2,7 +2,7 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 // import { act } from "react-dom/test-utils";
 
-import Item from "./Item";
+import Column from "./";
 
 let container = null;
 beforeEach(() => {
@@ -19,5 +19,5 @@ afterEach(() => {
 });
 
 test("App component - renders without crashing", () => {
-  render(<Item />, container);
+  render(<Column />, container);
 });
