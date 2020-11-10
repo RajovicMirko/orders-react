@@ -53,8 +53,18 @@ function PartnersList({ partners = [], ...rest }) {
     >
       {filteredPartners.map((item) => (
         <Item
+          key={item.id}
           actionsLeft={
             <>
+              <Button onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
+              <Button className="danger " onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
+              <Button className="success " onClick={handleAddPartner}>
+                <i className="fas fa-trash-alt"></i>
+              </Button>
               <Button className="round" onClick={handleAddPartner}>
                 <i className="fas fa-trash-alt"></i>
               </Button>
@@ -80,9 +90,9 @@ function PartnersList({ partners = [], ...rest }) {
             </>
           }
         >
-          <Column key={item.id} caption="Id" text={item.id} />
-          <Column key={item.id} caption="Name" text={item.name} />
-          <Column key={item.id} caption="Test" text={"Test text"} />
+          <Column caption="Id" text={item.id} />
+          <Column caption="Name" text={item.name} />
+          <Column caption="Test" text={"Test text"} />
         </Item>
       ))}
     </List>
