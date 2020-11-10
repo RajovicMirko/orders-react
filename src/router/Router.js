@@ -2,9 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 // PAGES
-import Home from "../views/Home";
-import Partners from "../views/Partners";
-import Orders from "../views/Orders";
+import Home from "views/Home";
+import Partners from "views/Partners";
+import Orders from "views/Orders";
 
 function Router() {
   return (

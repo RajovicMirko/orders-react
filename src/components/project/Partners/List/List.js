@@ -2,9 +2,8 @@ import "./List.scss";
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import Item from "./Item";
-// import Input from "../../../global/Input";
-import Input from "../../../global/Input";
-import Button from "../../../global/Button";
+import Input from "components/global/Input";
+import Button from "components/global/Button";
 
 function PartnersList({ partners = [], ...rest }) {
   let searchRef = useRef();

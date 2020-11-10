@@ -1,7 +1,7 @@
 import "./App.scss";
-import Layout from "../project/Layout";
+import Layout from "components/project/Layout";
 import { BrowserRouter } from "react-router-dom";
-import Router from "../../router";
+import Router from "router";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PartnersList from "../../components/project/Partners/List";
+import PartnersList from "components/project/Partners/List";
 
 export class Partners extends Component {
   constructor() {
