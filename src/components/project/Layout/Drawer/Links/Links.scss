@@ -11,28 +11,6 @@ ul {
   & li {
     padding: 0.3rem 0;
   }
-
-  /* width */
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: $primary;
-    border-radius: 50px;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $secondary;
-    border-radius: 50px;
-  }
-
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
 }
 
 @media screen and (min-width: 512px) {
