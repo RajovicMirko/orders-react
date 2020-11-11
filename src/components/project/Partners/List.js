@@ -45,7 +45,7 @@ function PartnersList({ partners = [], ...rest }) {
             onKeyUp={handleKeyUp}
             forwardRef={(ref) => (searchRef = ref)}
           ></Input>
-          <Button className="round white" onClick={handleAddPartner}>
+          <Button className="round white pulse" onClick={handleAddPartner}>
             <i className="fas fa-plus"></i>
           </Button>
         </>
@@ -57,7 +57,7 @@ function PartnersList({ partners = [], ...rest }) {
           actionsLeft=""
           actionsRight={
             <>
-              <Button className="flat success" onClick={handleAddPartner}>
+              <Button className="flat success pulse" onClick={handleAddPartner}>
                 <i className="fas fa-pencil-alt"></i>
               </Button>
               <Button className="flat danger" onClick={handleAddPartner}>
